@@ -1,0 +1,5 @@
+DEBUG=express-locallibrary-tutorial:* npm run devstart
+node populatedb <your mongodb url>​​​​
+mongo ds259250.mlab.com:59250/local_library -u local_library -p localibrary123
+
+

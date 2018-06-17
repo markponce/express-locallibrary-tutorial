@@ -7,8 +7,9 @@ var logger = require('morgan');
 //Set up mongoose connection
 var mongoose = require('mongoose');
 
-// var mongoDB = 'mongodb://locallibrary:locallibrary123@ds259250.mlab.com:59250/local_library';
-var mongoDB = 'mongodb://127.0.0.1:27017/local_library';
+var mongoDB = 'mongodb://locallibrary:locallibrary123@ds261440.mlab.com:61440/local_library';
+// var mongoDB = 'mongodb://127.0.0.1:27017/local_library';
+
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
