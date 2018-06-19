@@ -33,7 +33,11 @@ block content
       p There are no copies of this book in the library.
 
   hr
-  p
-    a(href=book.url+'/delete') Delete Book
-  p
-    a(href=book.url+'/update') Update Book
+  if book_instances.length > 0
+    p #[strong Delete the following book instance/s before attempting to delete this book.]
+  else 
+    p Do you really want to delete this Book?
+    form(method='POST' action='')
+      div.form-group
+        input#bookid.form-control(type='hidden',name='bookid', required='true', value=book._id )
+        button.btn.btn-primary(type='submit') Delete
